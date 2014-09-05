@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7228B6EC19B5353600A81D94 /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7228B6EB19B5353600A81D94 /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7228B6F619B5353600A81D94 /* HexColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6F519B5353600A81D94 /* HexColorTests.swift */; };
+		7228B70019B535B000A81D94 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
+		727F2DE419B6B7840033E0C7 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,7 @@
 		7228B6F119B5353600A81D94 /* HexColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7228B6F419B5353600A81D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7228B6F519B5353600A81D94 /* HexColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorTests.swift; sourceTree = "<group>"; };
+		7228B6FF19B535B000A81D94 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			children = (
 				7228B6EB19B5353600A81D94 /* HexColor.h */,
 				7228B6E919B5353600A81D94 /* Supporting Files */,
+				7228B6FF19B535B000A81D94 /* HexColor.swift */,
 			);
 			path = HexColor;
 			sourceTree = "<group>";
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7228B70019B535B000A81D94 /* HexColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7228B6F619B5353600A81D94 /* HexColorTests.swift in Sources */,
+				727F2DE419B6B7840033E0C7 /* HexColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +304,7 @@
 		7228B6FA19B5353600A81D94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -307,16 +314,19 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7228B6FB19B5353600A81D94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = HexColor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +384,7 @@
 				7228B6FB19B5353600A81D94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7228B6FC19B5353600A81D94 /* Build configuration list for PBXNativeTarget "HexColorTests" */ = {
 			isa = XCConfigurationList;
@@ -382,6 +393,7 @@
 				7228B6FE19B5353600A81D94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
