@@ -11,7 +11,7 @@ myLabel.textColor = 0xFFFFFF // Let there be white
 myView.backgroundColor = 0x0f126f // Deep blue
 
 // Yay, finally you can stop to use this crap:
-//UIColor.colorWithRed(0x0f/255.0, green: 0x12/255.0, blue: 0x65/255.0, 1.0)
+// UIColor.colorWithRed(0x0f/255.0, green: 0x12/255.0, blue: 0x65/255.0, 1.0)
 
 ```
 
