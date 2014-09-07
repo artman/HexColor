@@ -76,4 +76,28 @@ class HexColorTests: XCTestCase {
         XCTAssertEqual(components2[2], 0x44 / 255.0, "Blue component")
         XCTAssertEqual(components2[3], 0.5, "Alpha component")
     }
+    
+    func testColorMixing() {
+        var color: UIColor = (0x3377FF).alpha(0.5).mixWithColor((0x111111).alpha(0.3), amount: 0.5)
+    
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        XCTAssertEqual(red, 0x22 / 255.0, "Red component")
+        XCTAssertEqual(green, 0x44 / 255.0, "Green component")
+        XCTAssertEqual(blue, 0x88 / 255.0, "Blue component")
+        XCTAssertEqual(alpha, 0.4, "Alpha component")
+        
+        
+        color = (0x000000).alpha(0).mixWithColor((0xFFFFFF).alpha(1.0), amount: (1/15))
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+    
+        XCTAssertEqual(floor(red * 255), 0x11, "Red component")
+        XCTAssertEqual(floor(green * 255), 0x11, "Green component")
+        XCTAssertEqual(floor(blue * 255), 0x11, "Blue component")
+    }
 }
