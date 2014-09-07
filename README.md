@@ -32,6 +32,13 @@ layer.backgroundColor = (0xDDEEFF).alpha(0.5).CGColor
 
 ```
 
+As a bonus, you can mix two colors together:
+
+```
+myLabel.textColor = (0x3377FF).mixWithColor(0xFF2222, amount: 0.25)
+
+```
+
 Installation
 ------------
 1. Copy the HexColor.swift file over to your project.
