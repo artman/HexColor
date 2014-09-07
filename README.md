@@ -44,3 +44,10 @@ Installation
 1. Copy the HexColor.swift file over to your project.
 2. Done.
 
+Contribute
+----------
+To contribute, just fork, branch & send a pull request. To get in touch, hit me up on Twitter [@artman](http://twitter.com/artman)
+
+License
+-------
+HexColor is released under an MIT license. See the LICENSE file for more information
