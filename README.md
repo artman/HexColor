@@ -1,8 +1,6 @@
 HexColor
 ========
 
-Requirements: *XCode 6.0 Beta 7*
-
 HexColor is a simple extension that lets you define UIColors the way they were meant to be defined: As hex integer
 values.
 
