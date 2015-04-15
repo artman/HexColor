@@ -9,56 +9,24 @@
 import Foundation
 import UIKit
 
-extension Int {
-    /// A UIColor representing the color values defined by the Integer. The lowest three bytes of the Int are used to
-    /// represent the individual RGB values for the color, where the least significant byte defines blue.
-    ///
-    /// For example, (0xFF0000).UIColor is red and (0x0000FF).UIColor is blue.
-    public var UIColor: UIKit.UIColor {
-        let components = getColorComponents(self)
-        return UIKit.UIColor(red: components.red, green: components.green, blue: components.blue, alpha: 1.0)
-    }
-    
-    /// A CGColor representing the color values defined by the Integer. The lowest three bytes of the Int are used to
-    /// represent the individual RGB values for the color, where the least significant byte defines blue.
-    ///
-    /// For example, (0xFF0000).CGColor is red and (0x0000FF).CGColor is blue.
-    public var CGColor: CGColorRef {
-        return self.UIColor.CGColor
-    }
-    
-    /// A UIColor representing the color values defined by the Integer with the given alpha. The lowest three bytes 
-    /// of the Int are used to represent the individual RGB values for the color, where the least significant 
-    /// byte defines blue.
-    ///
-    /// For example, (0xFF0000).alpha(0.5) defines a red color with 50% opacity.
-    ///
-    /// :returns: A UIColor representation of the Int with the given alpha value
-    public func alpha(value:CGFloat) -> UIKit.UIColor {
-        return self.UIColor.alpha(value)
-    }
-    
-    /// A UIColor representing the color values defined by the Integer mixed with another UIColor. The lowest three bytes
-    /// of the Int are used to represent the individual RGB values for the color, where the least significant
-    /// byte defines blue.
-    ///
-    /// :param: color The color to mix with
-    /// :param: amount The amount (0-1) to mix the new color in.
-    /// :returns: A new UIColor instance representing the resulting color
-    public func mixWithColor(color:UIKit.UIColor, amount:Float) -> UIKit.UIColor {
-        return self.UIColor.mixWithColor(color, amount: amount)
-    }
-}
 
-extension UIColor : IntegerLiteralConvertible {
+extension UIColor {
     
-    /// Lets you use Integer literals in UIColor assigments without the need to convert it explicitly.
+    /// Initializes UIColor with an integer.
     ///
-    /// For example, use myView.backgroundColor = 0xFF0000 instead of myView.backgroundColor = (0xFF0000).UIColor
-    public class func convertFromIntegerLiteral(value: IntegerLiteralType) -> Self {
+    /// :param: value The integer value of the color. E.g. 0xFF0000 is red, 0x0000FF is blue.
+    public convenience init(_ value: Int) {
         let components = getColorComponents(value)
-
-        return self(red: components.red, green: components.green, blue: components.blue, alpha: 1.0)
+        self.init(red: components.red, green: components.green, blue: components.blue, alpha: 1.0)
+    }
+    
+    /// Initializes UIColor with an integer and alpha value.
+    ///
+    /// :param: value The integer value of the color. E.g. 0xFF0000 is red, 0x0000FF is blue.
+    /// :param: alpha The alpha value.
+    public convenience init(_ value: Int, alpha: CGFloat) {
+        let components = getColorComponents(value)
+        self.init(red: components.red, green: components.green, blue: components.blue, alpha: alpha)
     }
     
     /// Creates a new color with the given alpha value
