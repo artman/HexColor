@@ -18,7 +18,6 @@ myView.backgroundColor = UIColor(0x0f126f) // Deep blue
 
 // Yay, finally you can stop to use this crap:
 // UIColor.colorWithRed(0x0f/255.0, green: 0x12/255.0, blue: 0x65/255.0, 1.0)
-
 ```
 
 Need colors with alpha? No worries:
@@ -26,14 +25,12 @@ Need colors with alpha? No worries:
 ```
 myLabel.textColor = UIColor(0xFF0000).alpha(0.5) // Red with 50% opacity
 myLabel.textColor = UIColor(0xFF0000, alpha: 0.5) // Another way to do this
-
 ```
 
 You can also mix two colors together easily:
 
 ```
 myLabel.textColor = UIColor(0x3377FF).mixWithColor(0xFF2222, amount: 0.25)
-
 ```
 
 Installation
