@@ -14,7 +14,7 @@ extension UIColor {
     
     /// Initializes UIColor with an integer.
     ///
-    /// :param: value The integer value of the color. E.g. 0xFF0000 is red, 0x0000FF is blue.
+    /// - parameter value: The integer value of the color. E.g. 0xFF0000 is red, 0x0000FF is blue.
     public convenience init(_ value: Int) {
         let components = getColorComponents(value)
         self.init(red: components.red, green: components.green, blue: components.blue, alpha: 1.0)
@@ -22,8 +22,8 @@ extension UIColor {
     
     /// Initializes UIColor with an integer and alpha value.
     ///
-    /// :param: value The integer value of the color. E.g. 0xFF0000 is red, 0x0000FF is blue.
-    /// :param: alpha The alpha value.
+    /// - parameter value: The integer value of the color. E.g. 0xFF0000 is red, 0x0000FF is blue.
+    /// - parameter alpha: The alpha value.
     public convenience init(_ value: Int, alpha: CGFloat) {
         let components = getColorComponents(value)
         self.init(red: components.red, green: components.green, blue: components.blue, alpha: alpha)
@@ -33,7 +33,7 @@ extension UIColor {
     ///
     /// For example, (0xFF0000).alpha(0.5) defines a red color with 50% opacity.
     ///
-    /// :returns: A UIColor representation of the Int with the given alpha value
+    /// - returns: A UIColor representation of the Int with the given alpha value
     public func alpha(value:CGFloat) -> UIKit.UIColor {
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -47,9 +47,9 @@ extension UIColor {
     
     /// Mixes the color with another color
     ///
-    /// :param: color The color to mix with
-    /// :param: amount The amount (0-1) to mix the new color in.
-    /// :returns: A new UIColor instance representing the resulting color
+    /// - parameter color: The color to mix with
+    /// - parameter amount: The amount (0-1) to mix the new color in.
+    /// - returns: A new UIColor instance representing the resulting color
     public func mixWithColor(color:UIColor, amount:Float) -> UIColor {
         var comp1: [CGFloat] = Array(count: 4, repeatedValue: 0);
         self.getRed(&comp1[0], green: &comp1[1], blue: &comp1[2], alpha: &comp1[3])

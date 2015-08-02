@@ -12,7 +12,7 @@ import XCTest
 class HexColorTests: XCTestCase {
     
     func testConversion() {
-        var color = UIColor(0xFFEEDD)
+        let color = UIColor(0xFFEEDD)
 
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -43,7 +43,7 @@ class HexColorTests: XCTestCase {
     }
     
     func testAlphaConstructor() {
-        var color: UIColor = UIColor(0xFFEEDD, alpha:0.1)
+        let color: UIColor = UIColor(0xFFEEDD, alpha:0.1)
         
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -59,7 +59,7 @@ class HexColorTests: XCTestCase {
     }
     
     func testAlpha() {
-        var color: UIColor = UIColor(0xFFEEDD).alpha(0.1)
+        let color: UIColor = UIColor(0xFFEEDD).alpha(0.1)
         
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -75,7 +75,7 @@ class HexColorTests: XCTestCase {
     }
     
     func testCGColor() {
-        var layer = CALayer()
+        let layer = CALayer()
         layer.shadowColor = UIColor(0xFFEEDD).CGColor
 
         let components = CGColorGetComponents(layer.shadowColor)

@@ -7,7 +7,7 @@ Requirements
 ------------
 
 - iOS 7.0+ / Mac OS X 10.9+
-- Xcode 6.3 (Swift 1.2)
+- Xcode 7.0 (Swift 2.0)
 
 Quick start
 -----------
