@@ -32,16 +32,16 @@ myLabel.textColor = UIColor(0x3377FF).mixWithColor(0xFF2222, amount: 0.25)
 
 ## Installation
 
-1. Copy the HexColor.swift file over to your project.
-2. Done.
+To manually install, copy the HexColor.swift file over to your project.
 
 ### Carthage
 
-To integrate Signals into your project add the following to your `Cartfile`:
+To integrate Signals into your project using Carthage, add the following to your `Cartfile`:
 
 ```ruby
 github "artman/HexColor" ~> 1.0
 ```
+
 
 ## Contribute
 
