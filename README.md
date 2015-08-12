@@ -1,16 +1,13 @@
-HexColor
-========
+# HexColor
 
 HexColor is a simple extension that lets you initialize UIColors the way they were meant to be initialized: With hex integer values.
 
-Requirements
-------------
+## Requirements
 
 - iOS 7.0+ / Mac OS X 10.9+
 - Xcode 6.3 (Swift 1.2)
 
-Quick start
------------
+## Quick start
 
 ```
 myLabel.textColor = UIColor(0xFFFFFF) // Let there be white
@@ -33,15 +30,23 @@ You can also mix two colors together easily:
 myLabel.textColor = UIColor(0x3377FF).mixWithColor(0xFF2222, amount: 0.25)
 ```
 
-Installation
-------------
+## Installation
+
 1. Copy the HexColor.swift file over to your project.
 2. Done.
 
-Contribute
-----------
+### Carthage
+
+To integrate Signals into your project add the following to your `Cartfile`:
+
+```ruby
+github "artman/HexColor" ~> 1.0
+```
+
+## Contribute
+
 To contribute, just fork, branch & send a pull request. To get in touch, hit me up on Twitter [@artman](http://twitter.com/artman)
 
-License
--------
+## License
+
 HexColor is released under an MIT license. See the LICENSE file for more information
