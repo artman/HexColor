@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7228B6F019B5353600A81D94"
+               BuildableName = "HexColorTests.xctest"
+               BlueprintName = "HexColorTests"
+               ReferencedContainer = "container:HexColor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7228B6E519B5353600A81D94"
+            BuildableName = "HexColor.framework"
+            BlueprintName = "HexColor"
+            ReferencedContainer = "container:HexColor.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
