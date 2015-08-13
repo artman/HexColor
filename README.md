@@ -1,4 +1,5 @@
 # HexColor
+[![Build Status](https://travis-ci.org/artman/HexColor.svg)](https://travis-ci.org/artman/HexColor)
 
 HexColor is a simple extension that lets you initialize UIColors the way they were meant to be initialized: With hex integer values.
 
