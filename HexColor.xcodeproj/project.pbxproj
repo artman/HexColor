@@ -11,6 +11,8 @@
 		7228B6F619B5353600A81D94 /* HexColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6F519B5353600A81D94 /* HexColorTests.swift */; };
 		7228B70019B535B000A81D94 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
 		727F2DE419B6B7840033E0C7 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
+		72A3F8131B8182CA003A946C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A3F8111B8182AB003A946C /* UIKit.framework */; };
+		72A3F8151B8188BC003A946C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A3F8141B8188BC003A946C /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		7228B6F419B5353600A81D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7228B6F519B5353600A81D94 /* HexColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorTests.swift; sourceTree = "<group>"; };
 		7228B6FF19B535B000A81D94 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		72A3F8111B8182AB003A946C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72A3F8141B8188BC003A946C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A3F8151B8188BC003A946C /* Foundation.framework in Frameworks */,
+				72A3F8131B8182CA003A946C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 		7228B6DC19B5353600A81D94 = {
 			isa = PBXGroup;
 			children = (
+				72A3F8141B8188BC003A946C /* Foundation.framework */,
+				72A3F8111B8182AB003A946C /* UIKit.framework */,
 				7228B6E819B5353600A81D94 /* HexColor */,
 				7228B6F219B5353600A81D94 /* HexColorTests */,
 				7228B6E719B5353600A81D94 /* Products */,
