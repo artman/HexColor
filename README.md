@@ -43,7 +43,6 @@ To integrate Signals into your project using Carthage, add the following to your
 github "artman/HexColor" ~> 1.0
 ```
 
-
 ## Contribute
 
 To contribute, just fork, branch & send a pull request. To get in touch, hit me up on Twitter [@artman](http://twitter.com/artman)
