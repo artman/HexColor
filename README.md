@@ -10,7 +10,7 @@ HexColor is a simple extension that lets you initialize UIColors the way they we
 
 ## Requirements
 
-- iOS 7.0 / watchOS 2.0
+- iOS 7.0
 - Xcode 7.0 (Swift 2.0)
 
 ## Installation

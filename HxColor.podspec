@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/artman/HexColor.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
-  s.watchos.deployment_target = '2.0'
   
   s.source_files = 'HexColor/*.swift'
 
