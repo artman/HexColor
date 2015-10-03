@@ -23,6 +23,7 @@
 		7228B6F419B5353600A81D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7228B6F519B5353600A81D94 /* HexColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorTests.swift; sourceTree = "<group>"; };
 		7228B6FF19B535B000A81D94 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		726FD31F1BC06B5500A97A69 /* HxColor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = HxColor.podspec; sourceTree = "<group>"; };
 		72A3F8111B8182AB003A946C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72A3F8141B8188BC003A946C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -50,10 +51,10 @@
 		7228B6DC19B5353600A81D94 = {
 			isa = PBXGroup;
 			children = (
-				72A3F8141B8188BC003A946C /* Foundation.framework */,
-				72A3F8111B8182AB003A946C /* UIKit.framework */,
+				726FD31F1BC06B5500A97A69 /* HxColor.podspec */,
 				7228B6E819B5353600A81D94 /* HexColor */,
 				7228B6F219B5353600A81D94 /* HexColorTests */,
+				726FD31E1BC06B2000A97A69 /* Frameworks */,
 				7228B6E719B5353600A81D94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,8 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				7228B6EB19B5353600A81D94 /* HexColor.h */,
-				7228B6E919B5353600A81D94 /* Supporting Files */,
 				7228B6FF19B535B000A81D94 /* HexColor.swift */,
+				7228B6E919B5353600A81D94 /* Supporting Files */,
 			);
 			path = HexColor;
 			sourceTree = "<group>";
@@ -100,6 +101,15 @@
 				7228B6F419B5353600A81D94 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		726FD31E1BC06B2000A97A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72A3F8141B8188BC003A946C /* Foundation.framework */,
+				72A3F8111B8182AB003A946C /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +167,9 @@
 		7228B6DD19B5353600A81D94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Tuomas Artman";
 				TargetAttributes = {
 					7228B6E519B5353600A81D94 = {
@@ -245,6 +257,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -320,6 +333,7 @@
 				INFOPLIST_FILE = HexColor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "artman.fi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -338,6 +352,7 @@
 				INFOPLIST_FILE = HexColor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "artman.fi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -346,16 +361,13 @@
 		7228B6FD19B5353600A81D94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = HexColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "artman.fi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -363,12 +375,9 @@
 		7228B6FE19B5353600A81D94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = HexColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "artman.fi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
