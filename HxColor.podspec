@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'HxColor'
-  s.version = '1.0.0'
+  s.version = '2.0.0'
   s.license = 'MIT'
   s.summary = 'HexColor is a simple extension that lets you initialize UIColors the way they were meant to be initialized: With hex integer values.'
   s.homepage = 'https://github.com/artman/HexColor'
