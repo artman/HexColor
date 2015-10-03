@@ -72,8 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				7228B6EB19B5353600A81D94 /* HexColor.h */,
-				7228B6E919B5353600A81D94 /* Supporting Files */,
 				7228B6FF19B535B000A81D94 /* HexColor.swift */,
+				7228B6E919B5353600A81D94 /* Supporting Files */,
 			);
 			path = HexColor;
 			sourceTree = "<group>";
