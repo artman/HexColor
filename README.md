@@ -38,7 +38,7 @@ github "artman/HexColor" ~> 2.0
 
 ## Quick start
 
-```
+```Swift
 myLabel.textColor = UIColor(0xFFFFFF) // Let there be white
 myView.backgroundColor = UIColor(0x0f126f) // Deep blue
 
@@ -48,14 +48,14 @@ myView.backgroundColor = UIColor(0x0f126f) // Deep blue
 
 Need colors with alpha? No worries:
 
-```
+```Swift
 myLabel.textColor = UIColor(0xFF0000).alpha(0.5) // Red with 50% opacity
 myLabel.textColor = UIColor(0xFF0000, alpha: 0.5) // Another way to do this
 ```
 
 You can also mix two colors together easily:
 
-```
+```Swift
 myLabel.textColor = UIColor(0x3377FF).mixWithColor(0xFF2222, amount: 0.25)
 ```
 
