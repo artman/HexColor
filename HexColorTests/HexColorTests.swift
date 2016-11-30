@@ -76,25 +76,25 @@ class HexColorTests: XCTestCase {
     
     func testCGColor() {
         let layer = CALayer()
-        layer.shadowColor = UIColor(0xFFEEDD).CGColor
+        layer.shadowColor = UIColor(0xFFEEDD).cgColor
 
-        let components = CGColorGetComponents(layer.shadowColor)
-        XCTAssertEqual(components[0], 0xFF / 255.0, "Red component")
-        XCTAssertEqual(components[1], 0xEE / 255.0, "Green component")
-        XCTAssertEqual(components[2], 0xDD / 255.0, "Blue component")
-        XCTAssertEqual(components[3], 0xFF / 255.0, "Alpha component")
+        let components = layer.shadowColor?.components
+        XCTAssertEqual(components?[0], 0xFF / 255.0, "Red component")
+        XCTAssertEqual(components?[1], 0xEE / 255.0, "Green component")
+        XCTAssertEqual(components?[2], 0xDD / 255.0, "Blue component")
+        XCTAssertEqual(components?[3], 0xFF / 255.0, "Alpha component")
         
-        layer.backgroundColor = UIColor(0x223344).alpha(0.5).CGColor
+        layer.backgroundColor = UIColor(0x223344).alpha(0.5).cgColor
         
-        let components2 = CGColorGetComponents(layer.backgroundColor)
-        XCTAssertEqual(components2[0], 0x22 / 255.0, "Red component")
-        XCTAssertEqual(components2[1], 0x33 / 255.0, "Green component")
-        XCTAssertEqual(components2[2], 0x44 / 255.0, "Blue component")
-        XCTAssertEqual(components2[3], 0.5, "Alpha component")
+        let components2 = layer.backgroundColor?.components
+        XCTAssertEqual(components2?[0], 0x22 / 255.0, "Red component")
+        XCTAssertEqual(components2?[1], 0x33 / 255.0, "Green component")
+        XCTAssertEqual(components2?[2], 0x44 / 255.0, "Blue component")
+        XCTAssertEqual(components2?[3], 0.5, "Alpha component")
     }
     
     func testColorMixing() {
-        var color: UIColor = UIColor(0x3377FF).alpha(0.5).mixWithColor(UIColor(0x111111).alpha(0.3), amount: 0.5)
+        var color: UIColor = UIColor(0x3377FF).alpha(0.5).mix(with: UIColor(0x111111).alpha(0.3), amount: 0.5)
     
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -109,7 +109,7 @@ class HexColorTests: XCTestCase {
         XCTAssertEqual(alpha, 0.4, "Alpha component")
         
         
-        color = UIColor(0x000000).alpha(0).mixWithColor(UIColor(0xFFFFFF).alpha(1.0), amount: (1/15))
+        color = UIColor(0x000000).alpha(0).mix(with: UIColor(0xFFFFFF).alpha(1.0), amount: (1/15))
         color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
     
         XCTAssertEqual(floor(red * 255), 0x11, "Red component")
