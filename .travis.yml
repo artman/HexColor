@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.1
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
@@ -8,9 +8,9 @@ env:
   - IOS_FRAMEWORK_SCHEME="HexColor iOS"
   - TVOS_FRAMEWORK_SCHEME="HexColor tvOS"
   - WATCHOS_FRAMEWORK_SCHEME="HexColor watchOS"
-  - IOS_SDK=iphonesimulator10.0
-  - TVOS_SDK=appletvsimulator10.0
-  - WATCHOS_SDK=watchsimulator3.0
+  - IOS_SDK=iphonesimulator10.1
+  - TVOS_SDK=appletvsimulator10.1
+  - WATCHOS_SDK=watchsimulator3.1
 
   matrix:
     - DESTINATION="OS=9.0,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
