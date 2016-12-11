@@ -13,7 +13,7 @@
 		722F79CF1DFD073D0054846F /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
 		722F79D01DFD073E0054846F /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
 		722F79D11DFD074B0054846F /* HexColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6F519B5353600A81D94 /* HexColorTests.swift */; };
-		722F79E21DFD0A260054846F /* HexColor iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722F79D91DFD0A260054846F /* HexColor iOS.framework */; };
+		722F79E21DFD0A260054846F /* HexColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722F79D91DFD0A260054846F /* HexColor.framework */; };
 		722F79F01DFD0A5A0054846F /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6FF19B535B000A81D94 /* HexColor.swift */; };
 		722F79F11DFD0A5E0054846F /* HexColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228B6F519B5353600A81D94 /* HexColorTests.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,7 @@
 		722F79A91DFD06E70054846F /* HexColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		722F79B61DFD07030054846F /* HexColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		722F79BE1DFD07040054846F /* HexColor tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HexColor tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		722F79D91DFD0A260054846F /* HexColor iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "HexColor iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		722F79D91DFD0A260054846F /* HexColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		722F79E11DFD0A260054846F /* HexColor iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HexColor iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726FD31F1BC06B5500A97A69 /* HxColor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = HxColor.podspec; sourceTree = "<group>"; };
 		72A3F8111B8182AB003A946C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				722F79E21DFD0A260054846F /* HexColor iOS.framework in Frameworks */,
+				722F79E21DFD0A260054846F /* HexColor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 				722F79A91DFD06E70054846F /* HexColor.framework */,
 				722F79B61DFD07030054846F /* HexColor.framework */,
 				722F79BE1DFD07040054846F /* HexColor tvOS Tests.xctest */,
-				722F79D91DFD0A260054846F /* HexColor iOS.framework */,
+				722F79D91DFD0A260054846F /* HexColor.framework */,
 				722F79E11DFD0A260054846F /* HexColor iOS Tests.xctest */,
 			);
 			name = Products;
@@ -257,7 +257,7 @@
 			);
 			name = "HexColor iOS";
 			productName = "HexColor iOS";
-			productReference = 722F79D91DFD0A260054846F /* HexColor iOS.framework */;
+			productReference = 722F79D91DFD0A260054846F /* HexColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		722F79E01DFD0A260054846F /* HexColor iOS Tests */ = {
@@ -681,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "fi.artman.HexColor-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HexColor;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -709,7 +709,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "fi.artman.HexColor-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HexColor;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
