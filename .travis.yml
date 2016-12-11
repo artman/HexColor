@@ -1,22 +1,53 @@
 language: objective-c
-osx_image: xcode7
+osx_image: xcode8.1
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
+  - PROJECT=HexColor.xcodeproj
+  - IOS_FRAMEWORK_SCHEME="HexColor iOS"
+  - TVOS_FRAMEWORK_SCHEME="HexColor tvOS"
+  - WATCHOS_FRAMEWORK_SCHEME="HexColor watchOS"
+  - IOS_SDK=iphonesimulator10.1
+  - TVOS_SDK=appletvsimulator10.0
+  - WATCHOS_SDK=watchsimulator3.1
+
   matrix:
-    - DESTINATION="OS=8.1,name=iPhone 4S" SCHEME="HexColor" SDK=iphonesimulator9.0
-    - DESTINATION="OS=8.2,name=iPhone 5" SCHEME="HexColor" SDK=iphonesimulator9.0
-    - DESTINATION="OS=8.3,name=iPhone 5S" SCHEME="HexColor" SDK=iphonesimulator9.0
-    - DESTINATION="OS=8.4,name=iPhone 6" SCHEME="HexColor" SDK=iphonesimulator9.0
-    - DESTINATION="OS=9.0,name=iPhone 6 Plus" SCHEME="HexColor" SDK=iphonesimulator9.0
+    - DESTINATION="OS=9.3,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
+    - DESTINATION="OS=10.1,name=iPhone 5"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=10.1,name=iPhone 6"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=10.1,name=iPhone 7"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=10.0,name=Apple TV 1080p"    SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=3.1,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"  POD_LINT="NO"
+
+before_install:
+    - gem install slather -N
+    - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+
 script:
   - set -o pipefail
   - xcodebuild -version
-  - xcodebuild -project HexColor.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION"
-    -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - xcodebuild -showsdks
+  - instruments -s devices
+
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+    else
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+    else
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+
+  - if [ $POD_LINT == "YES" ]; then
+      pod lib lint;
+    fi
+
+after_success:
+   - ./coveralls.rb -x swift -e "HexColor iOS"
+
 notifications:
   email: false
-
-
-

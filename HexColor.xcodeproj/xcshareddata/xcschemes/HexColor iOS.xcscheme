@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7228B6E519B5353600A81D94"
-               BuildableName = "HexColor.framework"
-               BlueprintName = "HexColor"
+               BlueprintIdentifier = "722F79D81DFD0A260054846F"
+               BuildableName = "HexColor iOS.framework"
+               BlueprintName = "HexColor iOS"
                ReferencedContainer = "container:HexColor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7228B6F019B5353600A81D94"
-               BuildableName = "HexColorTests.xctest"
-               BlueprintName = "HexColorTests"
+               BlueprintIdentifier = "722F79E01DFD0A260054846F"
+               BuildableName = "HexColor iOS Tests.xctest"
+               BlueprintName = "HexColor iOS Tests"
                ReferencedContainer = "container:HexColor.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7228B6E519B5353600A81D94"
-            BuildableName = "HexColor.framework"
-            BlueprintName = "HexColor"
+            BlueprintIdentifier = "722F79D81DFD0A260054846F"
+            BuildableName = "HexColor iOS.framework"
+            BlueprintName = "HexColor iOS"
             ReferencedContainer = "container:HexColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7228B6E519B5353600A81D94"
-            BuildableName = "HexColor.framework"
-            BlueprintName = "HexColor"
+            BlueprintIdentifier = "722F79D81DFD0A260054846F"
+            BuildableName = "HexColor iOS.framework"
+            BlueprintName = "HexColor iOS"
             ReferencedContainer = "container:HexColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7228B6E519B5353600A81D94"
-            BuildableName = "HexColor.framework"
-            BlueprintName = "HexColor"
+            BlueprintIdentifier = "722F79D81DFD0A260054846F"
+            BuildableName = "HexColor iOS.framework"
+            BlueprintName = "HexColor iOS"
             ReferencedContainer = "container:HexColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
