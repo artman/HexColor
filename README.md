@@ -10,8 +10,8 @@ HexColor is a simple extension that lets you initialize UIColors the way they we
 
 ## Requirements
 
-- iOS 7.0
-- Xcode 7.0 (Swift 2.0)
+- iOS 7.0 / watchOS 2.0 / tvOS 10.0
+- Xcode 8.0 (Swift 3.0)
 
 ## Installation
 
@@ -19,7 +19,7 @@ To use HexColor with a project targeting iOS 7, simply copy `HexColor.swift` int
 
 ### CocoaPods
 
-CocoaPods 0.36 adds supports for Swift and embedded frameworks. To integrate HexColor into your project add the following to your `Podfile`:
+To integrate HexColor into your project add the following to your `Podfile`:
 
 ```ruby
 platform :ios, '8.0'
@@ -33,7 +33,7 @@ pod 'HxColor', '~> 2.0'
 To integrate Signals into your project using Carthage add the following to your `Cartfile`:
 
 ```ruby
-github "artman/HexColor" ~> 2.0
+github "artman/HexColor" ~> 3.0
 ```
 
 ## Quick start
