@@ -33,11 +33,11 @@ script:
   - xcodebuild -showsdks
   - instruments -s devices
   - if [ $BUILD == "YES" ]; then
-      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -sdk "$SDK" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build | xcpretty -c;
-      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -sdk "$SDK" -configuration Release ONLY_ACTIVE_ARCH=NO clean build | xcpretty -c;
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "platform=iOS Simulator,name=$DESTINATION" -sdk "$SDK" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build | xcpretty -c;
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "platform=iOS Simulator,name=$DESTINATION" -sdk "$SDK" -configuration Release ONLY_ACTIVE_ARCH=NO clean build | xcpretty -c;
     fi
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION" -sdk "$SDK" -configuration Debug ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test | xcpretty -c;
+      xcodebuild -project "$PROJECT" -scheme "$SCHEME" -destination "platform=iOS Simulator,name=$DESTINATION" -sdk "$SDK" -configuration Debug ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test | xcpretty -c;
     fi
   - if [ $POD_LINT == "YES" ]; then
       pod lib lint;
