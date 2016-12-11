@@ -25,7 +25,7 @@ To integrate HexColor into your project add the following to your `Podfile`:
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'HxColor', '~> 2.0'
+pod 'HxColor', '~> 3.0'
 ```
 
 ### Carthage
@@ -56,7 +56,7 @@ myLabel.textColor = UIColor(0xFF0000, alpha: 0.5) // Another way to do this
 You can also mix two colors together easily:
 
 ```Swift
-myLabel.textColor = UIColor(0x3377FF).mixWithColor(0xFF2222, amount: 0.25)
+myLabel.textColor = UIColor(0x3377FF).mix(with: 0xFF2222, amount: 0.25)
 ```
 
 ## Contribute
