@@ -104,9 +104,9 @@ class HexColorTests: XCTestCase {
         
         color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         
-        XCTAssertEqualWithAccuracy(red, 0x22 / 255.0, accuracy: 0.0001, "Red component")
-        XCTAssertEqualWithAccuracy(green, 0x44 / 255.0, accuracy: 0.0001, "Green component")
-        XCTAssertEqualWithAccuracy(blue, 0x88 / 255.0, accuracy: 0.0001, "Blue component")
+        XCTAssertEqual(red, 0x22 / 255.0, accuracy: 0.0001, "Red component")
+        XCTAssertEqual(green, 0x44 / 255.0, accuracy: 0.0001, "Green component")
+        XCTAssertEqual(blue, 0x88 / 255.0, accuracy: 0.0001, "Blue component")
         XCTAssertEqual(alpha, 0.4, "Alpha component")
         
         

@@ -1,14 +1,9 @@
 //
-//  HexColor.swift
-//  HexColor
-//
-//  Created by Tuomas Artman on 1.9.2014.
-//  Copyright (c) 2014 Tuomas Artman. All rights reserved.
+//  Copyright (c) 2014-2017 Tuomas Artman. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
 
 extension UIColor {
     
@@ -47,22 +42,22 @@ extension UIColor {
     
     /// Mixes the color with another color.
     ///
-    /// - parameter with: The color to mix with.
+    /// - parameter color: The color to mix with.
     /// - parameter amount: The amount (0-1) to mix the new color in.
     /// - returns: A new UIColor instance representing the resulting color.
     public func mix(with color: UIColor, amount: Float) -> UIColor {
-        var comp1: [CGFloat] = Array(repeating: 0, count: 4);
-        self.getRed(&comp1[0], green: &comp1[1], blue: &comp1[2], alpha: &comp1[3])
+        var r1: CGFloat = 0, g1: CGFloat = 0, b1: CGFloat = 0, a1: CGFloat = 0
+        self.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
         
-        var comp2: [CGFloat] = Array(repeating: 0, count: 4);
-        color.getRed(&comp2[0], green: &comp2[1], blue: &comp2[2], alpha: &comp2[3])
-        
-        var comp: [CGFloat] = Array(repeating: 0, count: 4);
-        for i in 0...3 {
-            comp[i] = comp1[i] + (comp2[i] - comp1[i]) * CGFloat(amount)
-        }
-        
-        return UIColor(red:comp[0], green: comp[1], blue: comp[2], alpha: comp[3])
+        var r2: CGFloat = 0, g2: CGFloat = 0, b2: CGFloat = 0, a2: CGFloat = 0
+        color.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+    
+        r1 = r1 + (r2 - r1) * CGFloat(amount)
+        g1 = g1 + (g2 - g1) * CGFloat(amount)
+        b1 = b1 + (b2 - b1) * CGFloat(amount)
+        a1 = a1 + (a2 - a1) * CGFloat(amount)
+            
+        return UIColor(red: r1, green: g1, blue: b1, alpha: a1)
     }
 
     // MARK: - Private interface
