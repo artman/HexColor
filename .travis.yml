@@ -8,17 +8,17 @@ env:
   - IOS_FRAMEWORK_SCHEME="HexColor iOS"
   - TVOS_FRAMEWORK_SCHEME="HexColor tvOS"
   - WATCHOS_FRAMEWORK_SCHEME="HexColor watchOS"
-  - IOS_SDK=iphonesimulator10.1
-  - TVOS_SDK=appletvsimulator10.0
-  - WATCHOS_SDK=watchsimulator3.1
+  - IOS_SDK=iphonesimulator11.0
+  - TVOS_SDK=appletvsimulator11.0
+  - WATCHOS_SDK=watchsimulator4.0
 
   matrix:
-    - DESTINATION="OS=9.3,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
-    - DESTINATION="OS=10.1,name=iPhone 5"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=10.1,name=iPhone 6"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=10.1,name=iPhone 7"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=10.0,name=Apple TV 1080p"    SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=3.1,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"  POD_LINT="NO"
+    - DESTINATION="OS=8.1,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=9.0,name=iPhone 6"           SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=10.1,name=iPhone 7 Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=11.0,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=11.0,name=Apple TV 1080p"    SCHEME="$TVOS_FRAMEWORK_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" POD_LINT="YES"
+    - DESTINATION="OS=4.0,name=Apple Watch - 38mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"  POD_LINT="NO"
 
 before_install:
     - gem install slather -N
