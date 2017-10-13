@@ -47,6 +47,10 @@
 		722F79D91DFD0A260054846F /* HexColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		722F79E11DFD0A260054846F /* HexColor iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HexColor iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726FD31F1BC06B5500A97A69 /* HxColor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = HxColor.podspec; sourceTree = "<group>"; };
+		72A049AC1F90849200830E12 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		72A049AD1F9084A400830E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A049B91F9086D600830E12 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		72A049BA1F9086D600830E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72A3F8111B8182AB003A946C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72A3F8141B8188BC003A946C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -98,6 +102,8 @@
 				726FD31F1BC06B5500A97A69 /* HxColor.podspec */,
 				7228B6E819B5353600A81D94 /* HexColor */,
 				7228B6F219B5353600A81D94 /* HexColorTests */,
+				72A049AB1F90849200830E12 /* test */,
+				72A049B81F9086D600830E12 /* test */,
 				726FD31E1BC06B2000A97A69 /* Frameworks */,
 				7228B6E719B5353600A81D94 /* Products */,
 			);
@@ -157,6 +163,24 @@
 				72A3F8111B8182AB003A946C /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72A049AB1F90849200830E12 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				72A049AC1F90849200830E12 /* test.h */,
+				72A049AD1F9084A400830E12 /* Info.plist */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		72A049B81F9086D600830E12 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				72A049B91F9086D600830E12 /* test.h */,
+				72A049BA1F9086D600830E12 /* Info.plist */,
+			);
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -550,6 +575,7 @@
 				PRODUCT_NAME = HexColor;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Debug;
@@ -558,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -571,6 +598,7 @@
 				PRODUCT_NAME = HexColor;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
@@ -578,28 +606,41 @@
 		722F79C81DFD07040054846F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = HexColor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fi.artman.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HexColor;
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
 		722F79C91DFD07040054846F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = HexColor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fi.artman.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HexColor;
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
