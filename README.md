@@ -25,7 +25,7 @@ To integrate HexColor into your project add the following to your `Podfile`:
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'HxColor', '~> 3.0'
+pod 'HxColor', '~> 4.0'
 ```
 
 ### Carthage
@@ -33,7 +33,7 @@ pod 'HxColor', '~> 3.0'
 To integrate Signals into your project using Carthage add the following to your `Cartfile`:
 
 ```ruby
-github "artman/HexColor" ~> 3.0
+github "artman/HexColor" ~> 4.0
 ```
 
 ## Quick start
