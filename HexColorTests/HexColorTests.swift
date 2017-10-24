@@ -1,9 +1,5 @@
 //
-//  HexColorTests.swift
-//  HexColorTests
-//
-//  Created by Tuomas Artman on 1.9.2014.
-//  Copyright (c) 2014 Tuomas Artman. All rights reserved.
+//  Copyright (c) 2014-2017 Tuomas Artman. All rights reserved.
 //
 
 import UIKit
